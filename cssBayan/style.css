@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto.woff') format('woff');
+}
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+main {
+    max-width: 120rem;
+}
+main .container {
+    width: 70%;
+    margin: 1.875rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition-duration: 0.5s;
+}
+main .container:hover {
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+main .container:hover .accordeon .working .x {
+    visibility: visible;
+    width: 2rem;
+    transition-duration: 0.5s;
+}
+main .container:hover .accordeon .non-working .plus {
+    visibility: visible;
+    width: 2rem;
+    transition-duration: 0.5s;
+}
+main .container h1 {
+    width: 100%;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.063px solid #bbb;
+    font-size: 300%;
+}
+main .container .accordeon {
+    width: 100%;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.063px solid #bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 0.5s;
+}
+main .container .accordeon:hover .text p {
+    color: #000000;
+    transition-duration: 0.5s;
+}
+main .container a {
+    text-decoration: none;
+    width: 100%;
+}
+main .container .accordeon:target .text p {
+    color: #000000;    
+}
+main .container .accordeon:target .non-working .plus {
+    visibility: hidden;
+    width: 0;
+}
+main .container .accordeon:target .non-working .x {
+    visibility: visible;
+    max-width: 2rem;
+}
+main .container .accordeon:target .meme {
+    visibility: visible;
+    width: 40%;
+}
+main .container:hover .accordeon:target .text .x {
+    visibility: visible;
+    width: 2rem;
+}
+main .container .accordeon:target ~ .container:hover .accordeon .working .x {
+    visibility: hidden;
+    width: 0;
+}
+main .container .accordeon:target ~ main .container:hover .accordeon .working .plus {
+    visibility: visible;
+    max-width: 2rem;
+}
+main .container .accordeon:hover .non-working .x {
+    visibility: visible;
+    width: 2rem;
+    transition-duration: 0.5s;
+}
+main .container .accordeon:hover .non-working .plus {
+    visibility: hidden;
+    width: 0;
+    transition-duration: 0.5s;
+}
+main .container .accordeon:hover .meme {
+    visibility: visible;
+    width: 40%;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text p {
+    font-size: 250%;
+    font-weight: bold;
+    color: #0000ff;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text .signs {
+    display: flex;
+}
+main .container .accordeon .text .active {
+    color: #000000;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text .x {
+    max-width: 2rem;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text .plus {
+    max-width: 2rem;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .text .hidden {
+    visibility: hidden;
+    width: 0;
+    /* height: 0; */
+    transition-duration: 0.5s;
+}
+main .container .accordeon .meme {
+    width: 40%;
+    align-self: center;
+    margin-bottom: 2rem;
+    transition-duration: 0.5s;
+}
+main .container .accordeon .hidden {
+    visibility: hidden;
+    width: 0;
+    transition-duration: 0.5s;
+}
+@media (max-width: 820px) {
+    main {
+        max-width: 51.25rem;
+    }
+    main .container h1 {
+        font-size: 250%;
+    }
+    main .container .accordeon .text p {
+        font-size: 200%;
+    }
+    main .container .accordeon .text .x {
+        max-width: 1rem;
+    }
+    main .container .accordeon .text .plus {
+        max-width: 1rem;
+    }
+}
+@media (max-width: 400px) {
+    main {
+        max-width: 25rem;
+    }
+    main .container h1 {
+        font-size: 150%;
+    }
+    main .container .accordeon .text p {
+        font-size: 100%;
+    }
+    main .container .accordeon .meme {
+        width: 60%;
+    }
+    main .container .accordeon .hidden {
+        visibility: hidden;
+        width: 0;
+        transition-duration: 0.5s;
+    }
+    main .container .accordeon:target .meme {
+        width: 60%;
+    }
+}
+@media (max-width: 320px) {
+    main {
+        max-width: 20rem;
+    }
+    main .container h1 {
+        font-size: 150%;
+    }
+    main .container .accordeon .text p {
+        font-size: 80%;
+    }
+    main .container .accordeon .meme {
+        width: 60%;
+    }
+    main .container .accordeon .hidden {
+        visibility: hidden;
+        width: 0;
+        transition-duration: 0.5s;
+    }
+    main .container .accordeon:target .meme {
+        width: 60%;
+    }
+}
